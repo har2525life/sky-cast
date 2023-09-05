@@ -11,4 +11,5 @@ interface WeatherError {
 
 interface PositionData {
   currentPosition: string;
+  currentPositionData: string[];
 }

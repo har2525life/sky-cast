@@ -31,7 +31,8 @@ function useWeather(): [
             maxTemp: kelvinToCelsius(data.main.temp_max),
             minTemp: kelvinToCelsius(data.main.temp_min),
           });
-          setPosition({ currentPosition: data.name });
+          console.log(data.coord)
+          setPosition({ currentPosition: data.name, currentPositionData: [data.coord.lon, data.coord.lat ] });
         } catch (e) {
           setError({ message: "Error fetching weather data." });
         }
